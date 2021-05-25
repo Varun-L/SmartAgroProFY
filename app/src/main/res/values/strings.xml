@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AgroPro</string>
+    <string name="get_started">Get Started</string>
+    <string name="how_to_use">How To Use</string>
+    <string name="cse_svuce">CSE SVUCE</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="market_prices">Market Prices</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="crop_prediction">Crop Prediction</string>
+    <string name="crop_prediction_advanced">Crop Prediction (Advanced)</string>
+    <string name="crop_prediction_basic">Crop Prediction (Basic)</string>
+    <string name="click_the_below_button_to_select_your_location">Click the below button to select your location</string>
+</resources>

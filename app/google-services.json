@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973208309915",
+    "project_id": "agropro-5fc5d",
+    "storage_bucket": "agropro-5fc5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973208309915:android:882a34a4e4c6777a48f63e",
+        "android_client_info": {
+          "package_name": "com.icy.agropro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973208309915-8q5l52rjft8i8gms6tcru7ktbvtamnmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUzkEJzvEXNn32Hok28IEDpyRtVRSgpOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973208309915-8q5l52rjft8i8gms6tcru7ktbvtamnmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

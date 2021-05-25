@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CropPredictionLandingPage1"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/linear_layout_1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/plant"
+                android:id="@+id/image_1"
+                android:contentDescription="@string/crop_prediction_basic"
+                />
+            <Button
+                android:id="@+id/cropPredictionBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_prediction_basic"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_2"
+            >
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/field"
+                android:contentDescription="@string/crop_prediction_advanced"
+                />
+
+            <Button
+                android:id="@+id/cropPredictionAdvanced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_prediction_advanced"
+                />
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_3"
+            >
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/money"
+                android:contentDescription="@string/market_prices"
+                />
+
+            <Button
+                android:id="@+id/marketPrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/market_prices"
+
+                />
+
+
+        </LinearLayout>
+        -->
+
+
+    </LinearLayout>
+</RelativeLayout>

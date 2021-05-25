@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CropPredictionBasic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:divider="@drawable/empty_divider"
+        android:showDividers="middle"
+        >
+
+        <TextView
+            android:id="@+id/label_pick_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:text="@string/click_the_below_button_to_select_your_location"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/pickLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Location" />
+
+        <TextView
+            android:id="@+id/textLocationPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/pHLand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="pH of your Soil"
+            android:gravity="center"
+            android:ems="13"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/rainFallLand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Rainfall(mm) in your area"
+            android:gravity="center"
+            android:ems="13"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/inputLandArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Area of your Land"
+            android:gravity="center"
+            android:ems="13"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>
