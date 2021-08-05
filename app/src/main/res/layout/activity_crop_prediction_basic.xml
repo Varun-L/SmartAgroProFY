@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".CropPredictionBasic">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +42,13 @@
             android:text="TextView"
             android:visibility="invisible" />
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have pH Value"
+            android:onClick="onCheckBoxClickedPh"
+            />
+
         <EditText
             android:id="@+id/pHLand"
             android:layout_width="wrap_content"
@@ -46,16 +56,31 @@
             android:hint="pH of your Soil"
             android:gravity="center"
             android:ems="13"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:visibility="gone"
+            />
 
-        <EditText
-            android:id="@+id/rainFallLand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Rainfall(mm) in your area"
-            android:gravity="center"
-            android:ems="13"
-            android:inputType="numberDecimal" />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rainfall : "
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_weight="1"
+        />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/rainfall_categories"
+        android:id="@+id/rainfall_spinner"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
 
         <EditText
             android:id="@+id/inputLandArea"
@@ -82,4 +107,5 @@
 
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

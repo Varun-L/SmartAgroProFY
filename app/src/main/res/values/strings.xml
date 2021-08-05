@@ -12,4 +12,10 @@
     <string name="crop_prediction_advanced">Crop Prediction (Advanced)</string>
     <string name="crop_prediction_basic">Crop Prediction (Basic)</string>
     <string name="click_the_below_button_to_select_your_location">Click the below button to select your location</string>
+    <string-array name="rainfall_categories">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
 </resources>

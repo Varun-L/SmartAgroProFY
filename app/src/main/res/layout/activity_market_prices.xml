@@ -24,23 +24,6 @@
             android:layout_marginTop="20dp"
             >
 
-
-            <EditText
-                android:id="@+id/editTextNumberSigned"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="13"
-                android:hint="Enter Code"
-                android:inputType="numberSigned" />
-
-            <Button
-                android:id="@+id/get_market_prices_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit" />
-
-
-
             <WebView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -108,9 +108,9 @@ public class HelperUtilityVolley {
 
     }
 
-    public void letVolleyCropPredictionBasic(String latitude_, String longitude_, String pHSoil, String rainfallLand, String landArea ,TextView textView, Activity activity){
+    public void letVolleyCropPredictionBasic(String latitude_, String longitude_, String pHSoil, String rainfallLand, String landArea , TextView textView, Activity activity){
 
-        String url="https://original-agro-pro.herokuapp.com/api_crop_prediction_basic";
+        String url="https://original-agro-pro.herokuapp.com/api_crop_prediction_basic_w_ph";
         url+="?lat="+latitude_+"&lon="+longitude_;
         url += "&ph_soil="+pHSoil+"&rainfall="+rainfallLand+"&area_sq="+landArea;
 //        url="http:192.168.0.101:5000";

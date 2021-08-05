@@ -26,18 +26,10 @@ public class MarketPrices extends AppCompatActivity {
                 .setAction("Action", null).show();
         getSupportActionBar().setTitle("Current Market Prices");
 
-        get_market_prices = findViewById(R.id.get_market_prices_data);
-        code = findViewById(R.id.editTextNumberSigned);
         webView = findViewById(R.id.webView1);
 
-        get_market_prices.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HelperUtilityVolley helperUtilityVolley = new HelperUtilityVolley();
-                helperUtilityVolley.letVolleyWeb(99,code.getText().toString(),"b",webView,MarketPrices.this);
-
-            }
-        });
+        HelperUtilityVolley helperUtilityVolley = new HelperUtilityVolley();
+        helperUtilityVolley.letVolleyWeb(99,"1","b",webView,MarketPrices.this);
 
 
     }

@@ -8,8 +8,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +39,10 @@ public class CropPredictionBasic extends AppCompatActivity {
     String lat,lon;
     Button pick_location , submit_button;
     TextView text_location , text_result;
-    EditText ph_land, area_sq, rainfall_land;
+    EditText ph_land, area_sq ;
+    Spinner rainfall_land;
+    boolean phChecked;
+    int spinnerValueRainfall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +55,26 @@ public class CropPredictionBasic extends AppCompatActivity {
         text_result = findViewById(R.id.textViewResult);
         ph_land = findViewById(R.id.pHLand);
         area_sq = findViewById(R.id.inputLandArea);
-        rainfall_land = findViewById(R.id.rainFallLand);
+        rainfall_land = findViewById(R.id.rainfall_spinner);
+
 
         pick_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new HelperUtilityVolley().getPlacePickerIntent(CropPredictionBasic.this);
                 startActivityForResult(intent, 1);
+
+            }
+        });
+
+        rainfall_land.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                spinnerValueRainfall=i;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
@@ -66,14 +85,29 @@ public class CropPredictionBasic extends AppCompatActivity {
 
                 String ph1 = ph_land.getText().toString();
                 String asq1 = area_sq.getText().toString();
-                String rainfall1 = rainfall_land.getText().toString();
-                helperUtilityVolley.letVolleyCropPredictionBasic(lat,lon,ph1,rainfall1,asq1,text_result,CropPredictionBasic.this);
+                String rainfallValue = String.valueOf(spinnerValueRainfall);
+                if(phChecked){
+                    helperUtilityVolley.letVolleyCropPredictionBasic(lat,lon,ph1,rainfallValue,asq1,text_result,CropPredictionBasic.this);
+                }
+                else{
+                    helperUtilityVolley.letVolleyCropPredictionBasic(lat,lon,"6.342",rainfallValue,asq1,text_result,CropPredictionBasic.this);
+                }
             }
         });
 
     }
 
 
+    public void onCheckBoxClickedPh(View v){
+
+        phChecked = ((CheckBox) v).isChecked();
+        if(phChecked){
+            ph_land.setVisibility(View.VISIBLE);
+        }else{
+            ph_land.setVisibility(View.GONE);
+        }
+
+    }
 
 
     @Override
